@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: lightblue;
+  text-align: center;
+  /* display: block;
+  justify-content: center;
+  align-items: center; */
+}
+div#result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn_rock,
+.btn_paper,
+.btn_scissors {
+  color: black;
+  background-color: aqua;
+  border-color: black;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  font-size: 100%;
+  font-weight: 900;
+}
+
+#result {
+  border: 5px solid black;
+  border-radius: 5px;
+  width: 310px;
+  height: 100px;
+  background-color: aliceblue;
+  margin-top: 10px;
+}
