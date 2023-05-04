@@ -51,20 +51,31 @@ h1 {
   font-size: 15px;
 }
 
-.form-container .input {
+.form-container .username {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  background-color: bisque;
+}
+.form-container .password {
   padding: 10px;
   height: 35px;
   border: none;
   background-color: bisque;
 }
 
-.form-container .input:focus {
+.form-container .username:focus {
+  transition: 0.1s;
+  transform: scale(1.01);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
+}
+.form-container .password:focus {
   transition: 0.1s;
   transform: scale(1.01);
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
 }
 
-.form-container .input:focus {
+.form-container .passward:focus {
   outline: none;
 }
 
