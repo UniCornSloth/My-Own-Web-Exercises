@@ -27,7 +27,7 @@ class loginForm {
     this.form.addEventListener("submit", this.onSubmit);
   }
 
-  // Method that is called when the form is submitted
+  // Method / Function that is called when the form is submitted or submit button clicked
   onSubmit = (event: Event) => {
     // Prevent the default form submission behavior, always use prevent default on this function
     event.preventDefault();
@@ -42,14 +42,3 @@ class loginForm {
     console.log(`Username: ${values.username}, Password: ${values.password}`);
   };
 }
-console.log("Hallo");
-
-// Function for submit button after Username and Passward is filled in
-// function handleSubmit(event: Event) {
-//   event.preventDefault();
-//   console.log("Button Clicked!");
-// }
-
-// const formSubmit = document.querySelector(".submit");
-
-// formSubmit.addEventListener(".submit", handleSubmit);
