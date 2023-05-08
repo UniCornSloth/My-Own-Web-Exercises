@@ -1,44 +1,64 @@
-// Login form
-// Interface that defines details for login form
-interface loginFormInformation {
-  username: string;
-  password: string | number;
+// Getting form elements from HTML document/ DOM
+// First fetch all elements from DOM using queryselector and store in constants for use in functions and eventlisteners
+const form = document.querySelector("#form") as HTMLFormElement;
+const usernameInput = document.querySelector("#username") as HTMLInputElement;
+const passwordInput = document.querySelector("#password") as HTMLInputElement;
+const submitButton = document.querySelector("#submit") as HTMLButtonElement;
+const formContainer = document.querySelector(
+  "#form-container"
+) as HTMLFormElement;
+const header = document.querySelector("#h1") as HTMLElement;
+
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function using Regular Expression to define and make sure password is secure must be atleast 8 Characters long.
+function isPasswordSecure(password: string): boolean {
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  return passwordRegex.test(password);
 }
 
-// Class for the login form
-class loginForm {
-  //Properties that reference the HTML input and form element
-  usernameInput: HTMLInputElement;
-  passwordInput: HTMLInputElement;
-  form: HTMLFormElement;
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Adding an event listener the form submit event
+// Using addEventlistener on submit button listenschecks if username and password is filled in
+form.addEventListener("submit", (event) => {
+  // Prevent default on event functions
+  event?.preventDefault();
 
-  // Methods
-  // Constructor method that intitializes the class and sets up event listeners
-  constructor() {
-    this.usernameInput = document.querySelector(
-      '.form input[type="text"]'
-    )! as HTMLInputElement;
-    this.passwordInput = document.querySelector(
-      '.form input[type="text"]'
-    )! as HTMLInputElement;
-    this.form = document.querySelector(".form") as HTMLFormElement;
+  // Getting the username and password inputs and values
+  // Values here are the details the user types in the username and password inputs on the form
+  const username = usernameInput.value;
+  const password = passwordInput.value;
 
-    // Adding event listener for the form submission event on button
-    this.form.addEventListener("submit", this.onSubmit);
+  // Check if form field contains are empty if empty throw error
+  if (username.trim() === "" || password.trim() === "") {
+    alert("Please fill in username!");
+    return;
   }
 
-  // Method / Function that is called when the form is submitted or submit button clicked
-  onSubmit = (event: Event) => {
-    // Prevent the default form submission behavior, always use prevent default on this function
-    event.preventDefault();
+  // Check if password is secure and uses the correct input characters using regex
+  if (!isPasswordSecure(password)) {
+    alert(
+      "Please enter a valid password that conatins at least one uppercas, one lower case, one digit and one special character! Must be atleast 8 characters long"
+    );
+    return;
+  }
 
-    // Create an object that stores the form data as key-value pairs
-    const values: loginFormInformation = {
-      username: this.usernameInput.value,
-      password: this.passwordInput.value,
-    };
+  // Logging the values to the console for reference
+  // Instead of loggin it, can be used to actually log in to page
+  console.log(`Username: ${username}, Password: ${password}`);
 
-    // Log the form data to console
-    console.log(`Username: ${values.username}, Password: ${values.password}`);
-  };
-}
+  // Hiding form simulating loggin in to user profile page
+  formContainer.style.display = "none";
+  header.style.display = "none";
+  // Redirecting to user profile page
+  // window.location.href = "about:blank";
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Adding an event listener to the submit button and click event
+// Creating the listener to listen/ check for when the user clicks the submit button
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  // Triggering the form submission event
+  form.dispatchEvent(new Event("submit"));
+});
