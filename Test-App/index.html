@@ -6,23 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="./style.css" />
-  <!-- <script src="https://kit.fontawesome.com/12f7fa1148.js" crossorigin="anonymous"></script> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/12f7fa1148.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body>
   <div class="icon-bar">
-    <img src="/img/image1.jpg" alt="" class="image1">
-    <a class="active" href="#"><i class="fa fa-home"></i></a>
-    <a href="#"><i class="fa fa-search"></i></a>
-    <a href="#"><i class="fa fa-envelope"></i></a>
-    <a href="#"><i class="fa fa-globe"></i></a>
-    <a href="#"><i class="fa fa-trash"></i></a>
-  </div>
+    <img src="/img/image1.jpg" alt="" class="image1" id="image1">
+    <a href="#"><i class="fa fa-home" id="home"></i>
+    <p>
+      My Portfolio
+    </p>
+    <a href="#"><i class="fa fa-person" id="about"></i>
+    <p>
+      About Me
+    </p>
+    <a href="#"><i class="fa fa-envelope" id="contact"></i>
+    <p>
+      Contact Me
+    </p>
+    <a href="https://github.com/UniCornSloth" target="_blank"><i class="fa fa-globe" id="repo"></i>
+    <p>
+    GitHubRepo
+    </p>
+  </a>
+  <!-- Download Cv -->
+    <a  href="/dlcontent/Herling CV. pdf.pdf" download><i class="fa fa-download" id="cv"></i>
+    <p>
+      Download CV
+    </p>
+  </a>
 
 
   <!-- Heading 1 and login form section -->
-  <h1 class="h1" id="h1">Please log in!</h1>
+  <h1 class="h1" id="h1">Please log in!</h1>  
   <div class="form-container" id="form-container">
+ 
     <p>LOGIN</p>
     <form class="form" id="form">
       <label>Username</label>

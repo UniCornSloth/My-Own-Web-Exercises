@@ -9,7 +9,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(90, 86, 86);
+  color: rgb(73, 73, 73);
   /* Temporary hide login */
   /* display: none; */
 }
@@ -28,11 +28,12 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 10rem;
+  position: absolute;
+  top: 20%;
   left: 50%;
   border-radius: 3%;
   transform: translate(-50%, -10%);
+  z-index: 999;
 }
 
 .form {
@@ -93,7 +94,7 @@ h1 {
   height: 30px;
   margin-top: 30px;
   background-color: rgb(73, 73, 73);
-  color: white;
+  color: bisque;
   font-size: 15px;
   border-radius: 5%;
 }
@@ -104,30 +105,58 @@ h1 {
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* main page
 /* Side NavBar Styling */
-.image {
-  size: 150px;
+.image1 {
+  width: 150px;
+  border-radius: 10px;
+  border: 2px solid #212529;
+  max-width: 146px;
+  height: auto;
 }
 
 .icon-bar {
   width: 150px; /* Set a specific width */
+  height: 940px;
   background-color: #555; /* Dark-grey background */
-  /* border-radius: 5px; */
+  border-radius: 10px;
 }
 
 .icon-bar a {
   display: block; /* Make the links appear below each other instead of side-by-side */
   text-align: center; /* Center-align text */
-  padding: 16px; /* Add some padding */
+  padding: 10px; /* Add some padding */
   transition: all 0.3s ease; /* Add transition for hover effects */
-  color: white; /* White text color */
-  font-size: 36px; /* Increased font-size */
-  border-radius: 5px;
+  color: bisque; /* White text color */
+  font-size: 20px; /* Increased font-size */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 10px;
 }
 
 .icon-bar a:hover {
-  background-color: #000; /* Add a hover color */
+  background-color: #212529; /* Add a hover color */
+  border-radius: 10px;
 }
 
 .active {
   background-color: rgb(139, 174, 179); /* Add an active/current color */
+}
+
+.icon-bar #home {
+  color: rgb(139, 174, 179);
+  font-size: 50px;
+}
+.icon-bar #about {
+  color: rgb(139, 174, 179);
+  font-size: 50px;
+}
+.icon-bar #contact {
+  color: rgb(139, 174, 179);
+  font-size: 50px;
+}
+.icon-bar #repo {
+  color: rgb(139, 174, 179);
+  font-size: 50px;
+}
+.icon-bar #cv {
+  color: rgb(139, 174, 179);
+  font-size: 50px;
 }
