@@ -133,15 +133,16 @@ h1 {
 
 .icon-bar a:hover {
   background-color: #212529; /* Add a hover color */
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .active {
-  background-color: rgb(139, 174, 179); /* Add an active/current color */
+  background-color: rgb(0, 0, 0); /* Add an active/current color */
+  border-radius: 5px;
 }
 
 .icon-bar #home {
-  color: rgb(139, 174, 179);
+  color: rgb(70, 97, 100);
   font-size: 50px;
 }
 .icon-bar #about {

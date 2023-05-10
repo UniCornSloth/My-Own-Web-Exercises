@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,61 +8,73 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="./style.css" />
   <script src="https://kit.fontawesome.com/12f7fa1148.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
+
 <body>
-  <div class="icon-bar">
-    <img src="/img/image1.jpg" alt="" class="image1" id="image1">
-    <a href="#"><i class="fa fa-home" id="home"></i>
-    <p>
-      My Portfolio
-    </p>
-    <a href="#"><i class="fa fa-person" id="about"></i>
-    <p>
-      About Me
-    </p>
-    <a href="#"><i class="fa fa-envelope" id="contact"></i>
-    <p>
-      Contact Me
-    </p>
-    <a href="https://github.com/UniCornSloth" target="_blank"><i class="fa fa-globe" id="repo"></i>
-    <p>
-    GitHubRepo
-    </p>
-  </a>
-  <!-- Download Cv -->
-    <a  href="/dlcontent/Herling CV. pdf.pdf" download><i class="fa fa-download" id="cv"></i>
-    <p>
-      Download CV
-    </p>
-  </a>
 
-
-  <!-- Heading 1 and login form section -->
-  <h1 class="h1" id="h1">Please log in!</h1>  
+  <!-- LOGIN FORM SECTION -->
   <div class="form-container" id="form-container">
- 
     <p>LOGIN</p>
     <form class="form" id="form">
       <label>Username</label>
-      <input
-        type="text"
-        class="username"
-        placeholder="Enter username"
-        id="username"
-      />
+      <input type="text" class="username" placeholder="Enter username as User1" id="username" />
       <label>Password</label>
-      <input
-        type="text"
-        class="password"
-        placeholder="Enter Password"
-        id="password"
-      />
+      <input type="text" class="password" placeholder="Enter Password as Password@123" id="password" />
       <button id="submit">Submit</button>
     </form>
   </div>
+
+  <!-- MAIN PAGE -->
+  <div id="main-page" hidden>
+    <!-- Side nav bar /////////////////////////////////////////////////////////////////////////////////-->
+    <div class="icon-bar">
+      <img src="/img/image1.jpg" alt="" class="image1" id="image1">
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio">
+        <a href="#"><i class="fa fa-home" id="home"></i>
+          <p>
+            My Portfolio
+          </p>
+        </a>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section id="about-me">
+        <a href="#"><i class="fa fa-user" id="about"></i>
+          <p>
+            About Me
+          </p>
+        </a>
+      </section>
+
+      <!-- CONTACT ME SECTION -->
+      <section id="contact-me">
+        <a href="#"><i class="fa fa-envelope" id="contact"></i>
+          <p>
+            Contact Me
+          </p>
+        </a>
+      </section>
+
+
+      <a href="https://github.com/UniCornSloth" target="_blank"><i class="fa fa-globe" id="repo"></i>
+        <p>
+          GitHubRepo
+        </p>
+      </a>
+
+
+      <!-- Download Cv -->
+      <a href="/dlcontent/Herling CV. pdf.pdf" download><i class="fa fa-download" id="cv"></i>
+        <p>
+          Download CV
+        </p>
+      </a>
+    </div>
+  </div>
+
   <script src="./dist/app.js"></script>
 </body>
-  
-</body>
+
 </html>
