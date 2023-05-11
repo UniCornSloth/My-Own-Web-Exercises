@@ -14,6 +14,12 @@ const mainPage = document.querySelector("#main-page") as HTMLElement;
 const portfolioButton = document.querySelector("#portfolio") as HTMLElement;
 const aboutMeButton = document.querySelector("#about-me") as HTMLElement;
 const contactMeButton = document.querySelector("#contact-me") as HTMLElement;
+const downloadIcon = document.querySelector("#cvicon") as HTMLElement;
+const downloadLink = document.querySelector("#download-link") as HTMLElement;
+
+// Elements for loading bar
+const repoLink = document.querySelector("repo-link") as HTMLAnchorElement;
+const loader = document.querySelector("loader") as HTMLElement;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // LOGIN SECTION
@@ -25,13 +31,13 @@ function isPasswordSecure(password: string): boolean {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Show main page after login has been submitted
+// Function to show main page after login has been submitted
 function showMainPage() {
   formContainer.style.display = "none";
   mainPage.style.display = "block";
 }
 
-// HighLighting button on selected section function
+// Function to high light button on selected section on the nav bar
 function highlightButton(selectedButton: HTMLElement) {
   const activeButton = document.querySelector(
     ".icon-bar .active"
@@ -41,6 +47,41 @@ function highlightButton(selectedButton: HTMLElement) {
   }
   selectedButton.classList.add("active");
 }
+
+// Function to add flip animation on download icon
+downloadIcon.addEventListener("mousedown", (event) => {
+  event.preventDefault();
+  downloadIcon.classList.add("flip");
+});
+downloadIcon.addEventListener("mouseup", (event) => {
+  event.preventDefault();
+  downloadIcon.classList.remove("flip");
+});
+
+downloadLink.addEventListener("mousedown", (event) => {
+  event.preventDefault();
+  downloadIcon.classList.add("flip");
+});
+downloadLink.addEventListener("mouseup", (event) => {
+  event.preventDefault();
+  downloadIcon.classList.remove("flip");
+});
+
+// Function for loading bar on repoLink
+// repoLink.addEventListener("click", (event) => {
+//   event.preventDefault();
+
+//   // show loader
+//   loader.style.display = "block";
+
+//   // open link in new tab
+//   window.open(repoLink.target, "_blank");
+
+//   // hide loader after 3 seconds
+//   setTimeout(() => {
+//     loader.style.display = "none";
+//   }, 3000);
+// });
 
 // Adding an event listener the form submit event
 // Using addEventlistener on submit button listenschecks if username and password is filled in
@@ -55,7 +96,7 @@ form.addEventListener("submit", (event) => {
 
   // Check if form field containers are empty if empty throw error
   if (username.trim() === "" || password.trim() === "") {
-    alert("Please fill in username!");
+    alert("Please fill in Username and Password!");
     return;
   }
 

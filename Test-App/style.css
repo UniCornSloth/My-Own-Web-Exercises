@@ -85,10 +85,6 @@ h1 {
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
 }
 
-.form-container .passward:focus {
-  outline: none;
-}
-
 .form-container button {
   border: none;
   height: 30px;
@@ -157,7 +153,40 @@ h1 {
   color: rgb(139, 174, 179);
   font-size: 50px;
 }
-.icon-bar #cv {
+.icon-bar #cvicon {
   color: rgb(139, 174, 179);
   font-size: 50px;
+}
+
+.icon-bar a #cv:hover {
+  transition: 1s;
+}
+
+.flip {
+  rotate: 20deg;
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  display: none;
+}
+
+.loading-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-top-color: #1abc9c;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
