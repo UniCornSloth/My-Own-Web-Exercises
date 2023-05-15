@@ -67,30 +67,14 @@ downloadLink.addEventListener("mouseup", (event) => {
   downloadIcon.classList.remove("flip");
 });
 
-// Function for loading bar on repoLink
-// repoLink.addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   // show loader
-//   loader.style.display = "block";
-
-//   // open link in new tab
-//   window.open(repoLink.target, "_blank");
-
-//   // hide loader after 3 seconds
-//   setTimeout(() => {
-//     loader.style.display = "none";
-//   }, 3000);
-// });
-
 // Adding an event listener the form submit event
-// Using addEventlistener on submit button listenschecks if username and password is filled in
+// Using addEventlistener on submit button listens and checks if username and password is filled in
 form.addEventListener("submit", (event) => {
   // Prevent default on event functions
   event?.preventDefault();
 
   // Getting the username and password inputs and values
-  // Values here are the details the user types in the username and password inputs on the form
+  // Values here are the details the user types in the "username" and "password" inputs on the form
   const username = usernameInput.value;
   const password = passwordInput.value;
 
