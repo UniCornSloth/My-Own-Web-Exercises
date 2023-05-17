@@ -1,5 +1,6 @@
 body {
   background-color: grey;
+  @media only screen and (max-width: 600px) margin-left: 0;
 }
 
 /* Login Form Styling */
@@ -99,7 +100,6 @@ h1 {
   box-shadow: 0px 0px 3px 0px #212529;
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* main page
 /* Side NavBar Styling */
 .image1 {
   width: 150px;
@@ -109,14 +109,14 @@ h1 {
   height: auto;
 }
 
-.icon-bar {
+#side-nav-bar {
   width: 150px; /* Set a specific width */
   height: 940px;
   background-color: #555; /* Dark-grey background */
   border-radius: 10px;
 }
 
-.icon-bar a {
+#side-nav-bar a {
   display: block; /* Make the links appear below each other instead of side-by-side */
   text-align: center; /* Center-align text */
   padding: 10px; /* Add some padding */
@@ -127,7 +127,7 @@ h1 {
   margin: 0 10px;
 }
 
-.icon-bar a:hover {
+#side-nav-bar a:hover {
   background-color: #212529; /* Add a hover color */
   border-radius: 5px;
 }
@@ -138,33 +138,37 @@ h1 {
   transition: all 3s ease;
 }
 
-.icon-bar #home {
+#side-nav-bar #home {
   color: rgb(114, 230, 243);
   font-size: 50px;
 }
-.icon-bar #about {
+#side-nav-bar #about {
   color: rgb(139, 174, 179);
   font-size: 50px;
 }
-.icon-bar #contact {
+#side-nav-bar #contact {
   color: rgb(139, 174, 179);
   font-size: 50px;
 }
-.icon-bar #repo {
+#side-nav-bar #repo {
   color: rgb(139, 174, 179);
   font-size: 50px;
 }
-.icon-bar #cvicon {
+#side-nav-bar #cvicon {
   color: rgb(139, 174, 179);
   font-size: 50px;
 }
 
-.icon-bar a #cv:hover {
+#side-nav-bar a #cv:hover {
   transition: 1s;
 }
 
 .flip {
   rotate: 20deg;
 }
-
-/* CAROUSEL */
+/* Page content */
+#main {
+  margin-left: 25%;
+  margin-top: 0%;
+  position: flex;
+}

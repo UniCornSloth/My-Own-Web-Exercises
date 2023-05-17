@@ -11,9 +11,9 @@ const formContainer = document.querySelector(
 
 // Elements on the Main Nav Bar
 const mainPage = document.querySelector("#main-page") as HTMLElement;
-const portfolioButton = document.querySelector("#portfolio") as HTMLElement;
-const aboutMeButton = document.querySelector("#about-me") as HTMLElement;
-const contactMeButton = document.querySelector("#contact-me") as HTMLElement;
+const portfolioSection = document.querySelector("#portfolio") as HTMLElement;
+const aboutMeSection = document.querySelector("#about-me") as HTMLElement;
+const contactMeSection = document.querySelector("#contact-me") as HTMLElement;
 const downloadIcon = document.querySelector("#cvicon") as HTMLElement;
 const downloadLink = document.querySelector("#download-link") as HTMLElement;
 
@@ -40,7 +40,7 @@ function showMainPage() {
 // Function to high light button on selected section on the nav bar
 function highlightButton(selectedButton: HTMLElement) {
   const activeButton = document.querySelector(
-    ".icon-bar .active"
+    "#side-nav-bar .active"
   ) as HTMLElement;
   if (activeButton) {
     activeButton.classList.remove("active");
@@ -100,24 +100,24 @@ form.addEventListener("submit", (event) => {
   showMainPage();
 
   // Highlighting button on selected section
-  highlightButton(portfolioButton);
+  highlightButton(portfolioSection);
 });
 
 // Event Listeners for each section to be highlighted when clicked or selected.
 // PORTFOLIO SELECTION
-portfolioButton.addEventListener("click", (event) => {
+portfolioSection.addEventListener("click", (event) => {
   event.preventDefault();
-  highlightButton(portfolioButton);
+  highlightButton(portfolioSection);
 });
 // ABOUT ME SELECTION
-aboutMeButton.addEventListener("click", (event) => {
+aboutMeSection.addEventListener("click", (event) => {
   event.preventDefault();
-  highlightButton(aboutMeButton);
+  highlightButton(aboutMeSection);
 });
 // CONTACT ME SELECTION
-contactMeButton.addEventListener("click", (event) => {
+contactMeSection.addEventListener("click", (event) => {
   event.preventDefault();
-  highlightButton(contactMeButton);
+  highlightButton(contactMeSection);
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
