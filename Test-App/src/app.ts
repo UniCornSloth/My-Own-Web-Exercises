@@ -118,10 +118,6 @@ downloadLink.addEventListener("mouseup", (event) => {
   downloadIcon.classList.remove("flip");
 });
 
-portfolioSection.addEventListener("click", navigateToSection);
-aboutMeSection.addEventListener("click", navigateToSection);
-contactMeSection.addEventListener("click", navigateToSection);
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Adding an event listener to the submit button and click event
 // Creating the listener to listen/ check for when the user clicks the submit button
@@ -133,31 +129,19 @@ submitButton.addEventListener("click", (event) => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // PAGE SECTIONS
-const navLinks = document.querySelectorAll("#side-nav-bar a");
-navLinks.forEach((navLink) => {
-  navLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    const target = (event.target as HTMLElement).getAttribute("href");
-    if (target) {
-      navigateToSection(target);
-    }
-  });
-});
+// Typewriter Demo
+let i: number = -1;
+let txt: string = "Web Developer Student"; /* The text */
+let speed: number = 90; /* The speed/duration of the effect in milliseconds */
 
-function navigateToSection(target: string) {
-  const section = document.querySelector(target);
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: "smooth",
-    });
+function typeWriter() {
+  if (i < txt.length) {
+    const element = document.getElementById("typewriterdemo");
+    if (element) {
+      element.innerHTML += txt.charAt(i);
+    }
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
-
-downloadLink.addEventListener("click", (event) => {
-  event.preventDefault();
-  const link = document.createElement("a");
-  link.href = "/dlcontent/HerlingCV.pdf";
-  link.download = "HerlingCV.pdf";
-  link.click();
-});
+typeWriter();

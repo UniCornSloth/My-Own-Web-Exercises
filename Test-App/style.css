@@ -1,19 +1,12 @@
 @media only screen and (max-width: 600px) {
-  body {
+  body #html-body {
     background: #555;
     margin-left: 0;
   }
 }
-/* Login Form Styling */
-h1 {
-  position: fixed;
-  top: 2rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(73, 73, 73);
-  /* Temporary hide login */
-  /* display: none; */
+
+body {
+  background: #bbbaba;
 }
 
 .form-container {
@@ -26,7 +19,7 @@ h1 {
   height: 350px;
   /* Temporary hidden */
   display: flex;
-  /* display: none; */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -102,43 +95,49 @@ h1 {
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Side NavBar Styling */
-.image1 {
-  width: 150px;
+.logo {
+  display: block;
+  width: 196px;
   border-radius: 10px;
   border: 2px solid #212529;
-  max-width: 146px;
   height: auto;
+  margin-bottom: 20px;
 }
 
 #side-nav-bar {
-  width: 150px; /* Set a specific width */
-  height: 940px;
-  background-color: #555; /* Dark-grey background */
-  border-radius: 10px;
+  width: 200px; /* Set the desired width */
+  height: 100vh; /* Adjust the height as needed */
+  background-color: #555;
+  position: fixed; /* Set the position to fixed */
+  left: 0; /* Position it to the left */
+  top: 0; /* Position it at the top */
+  overflow: auto; /* Overflow due to float */
 }
 
 #side-nav-bar a {
   display: block; /* Make the links appear below each other instead of side-by-side */
   text-align: center; /* Center-align text */
-  padding: 10px; /* Add some padding */
+  padding-top: 10px;
   transition: all 1s ease; /* Add transition for hover effects */
-  color: bisque; /* White text color */
+  color: bisque; /*text color */
   font-size: 20px; /* Increased font-size */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0 10px;
+  margin: 15px;
+  height: 110px;
 }
 
 #side-nav-bar a:hover {
   background-color: #212529; /* Add a hover color */
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .active {
   background-color: rgb(0, 0, 0); /* Add an active/current color */
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 3s ease;
 }
 
+/* ICON STYLING */
 #side-nav-bar #home {
   color: rgb(114, 230, 243);
   font-size: 50px;
@@ -167,9 +166,34 @@ h1 {
 .flip {
   rotate: 20deg;
 }
-/* Page content */
-#main {
-  margin-left: 25%;
-  margin-top: 0%;
-  position: flex;
+/* Main Page content */
+#main-page {
+  margin-left: 200px; /* Adjust the margin to create space next to the navigation bar */
+  padding: 10px; /* Add padding to the main page content */
+}
+
+.portfolio-content {
+  order: -1;
+  padding: 20px;
+  background-color: #b7cad3;
+  box-shadow: #212529;
+  border-radius: 10px;
+}
+
+.h1 {
+  color: rgb(0, 0, 0);
+  font-size: 70px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -10px;
+  margin-bottom: -5px;
+  text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #3d3d3d, 0 0 10px #3d3d3d,
+    0 0 50px #3d3d3d, 0 0 60px #3d3d3d, 0 0 20px #3d3d3d;
+}
+
+.h2 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
