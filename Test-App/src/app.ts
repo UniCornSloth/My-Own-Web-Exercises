@@ -23,6 +23,7 @@ const downloadLink = document.querySelector("#download-link") as HTMLElement;
 function showMainPage() {
   formContainer.style.display = "none";
   mainPage.style.display = "block";
+  typeWriter();
 }
 
 // LOGIN SECTION
@@ -87,6 +88,7 @@ form.addEventListener("submit", (event) => {
 portfolioSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(portfolioSection);
+  showMainPage();
 });
 // ABOUT ME SELECTION
 aboutMeSection.addEventListener("click", (event) => {
@@ -131,17 +133,16 @@ submitButton.addEventListener("click", (event) => {
 // PAGE SECTIONS
 // Typewriter Demo
 let i: number = -1;
-let txt: string = "Web Developer Student"; /* The text */
-let speed: number = 90; /* The speed/duration of the effect in milliseconds */
+let txt: string = "Web Developer Student"; // The text content
+let speed: number = 90; //The speed/duration of the effect in milliseconds for the text to "write on page"
 
 function typeWriter() {
   if (i < txt.length) {
     const element = document.getElementById("typewriterdemo");
     if (element) {
-      element.innerHTML += txt.charAt(i);
+      element.innerHTML += txt.charAt(i); //charAt(i) property of the element is updated by appending the character at the current index. This adds the character at the current index
     }
-    i++;
-    setTimeout(typeWriter, speed);
+    i++; // This increments the index 'i' to move to the next character in the string.
+    setTimeout(typeWriter, speed); //This sets the speed at wich the characters are displayed on the page.
   }
-}
-typeWriter();
+} //The typewritere function is called to display the the characters one at a time.

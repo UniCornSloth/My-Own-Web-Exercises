@@ -19,7 +19,7 @@ body {
   height: 350px;
   /* Temporary hidden */
   display: flex;
-  display: none;
+  /* display: none; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -172,28 +172,108 @@ body {
   padding: 10px; /* Add padding to the main page content */
 }
 
-.portfolio-content {
+.portfolio-content-section {
   order: -1;
   padding: 20px;
-  background-color: #b7cad3;
+  background-color: rgb(139, 174, 179);
   box-shadow: #212529;
   border-radius: 10px;
+  height: 92vh;
 }
 
 .h1 {
   color: rgb(0, 0, 0);
-  font-size: 70px;
+  font-size: 80px;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin-top: -10px;
   margin-bottom: -5px;
-  text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #3d3d3d, 0 0 10px #3d3d3d,
-    0 0 50px #3d3d3d, 0 0 60px #3d3d3d, 0 0 20px #3d3d3d;
+  text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
+    0 0 10px #3d3d3d, 0 0 100px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
 }
 
 .h2 {
-  color: rgb(0, 0, 0);
+  color: #3d3d3d;
   font-size: 30px;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* INTRO PARAGRAPH STYLING */
+.para {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: large;
+  text-align: center;
+  word-break: break-word;
+  margin-bottom: 30px;
+}
+
+/* IMAGE CONTAINER STYLING */
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  /* width: 33.33%; */
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 4);
+}
+
+.image-container img:last-child {
+  margin-right: 0;
+}
+
+/* BUTTONS */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  z-index: 1;
+  position: relative;
+  font-weight: 1000;
+  font-size: 16px;
+  box-shadow: 4px 8px 19px -3px#212529;
+  transition: all 250ms;
+  overflow: hidden;
+  border: unset;
+  border-radius: 5px;
+  background-color: bisque;
+  font-size: large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: #212529;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px #212529;
+  box-shadow: 4px 8px 19px -3px #212529;
+  transition: all 400ms;
+}
+
+button:hover {
+  color: bisque;
+}
+
+button:hover::before {
+  width: 100%;
 }
