@@ -19,7 +19,7 @@ body {
   height: 350px;
   /* Temporary hidden */
   display: flex;
-  /* display: none; */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -172,16 +172,16 @@ body {
   padding: 10px; /* Add padding to the main page content */
 }
 
+/* PORTFOLIO SECTION */
 .portfolio-content-section {
   order: -1;
   padding: 20px;
   background-color: rgb(139, 174, 179);
-  box-shadow: #212529;
   border-radius: 10px;
   height: 92vh;
 }
 
-.h1 {
+.h1-portfolio {
   color: rgb(0, 0, 0);
   font-size: 80px;
   text-align: center;
@@ -193,12 +193,107 @@ body {
     0 0 10px #3d3d3d, 0 0 100px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
 }
 
-.h2 {
+.h2-portfolio {
   color: #3d3d3d;
   font-size: 30px;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+/* ABOUT ME SECTION */
+.aboutme-content-section {
+  margin-top: 20px;
+  order: -1;
+  padding: 20px;
+  background-color: rgb(139, 174, 179);
+  border-radius: 10px;
+  height: 92vh;
+}
+
+.h1-about {
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
+    0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
+}
+.h1-skills {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
+    0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
+}
+.h1-hobbies {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
+    0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
+}
+
+.para-about {
+  margin-top: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: large;
+  text-align: center;
+  word-break: break-word;
+  margin-bottom: 10px;
+}
+
+/* CONTACT ME SECTION */
+.contactme-content-section {
+  margin-top: 20px;
+  order: -1;
+  padding: 20px;
+  background-color: rgb(139, 174, 179);
+  border-radius: 10px;
+  height: 92vh;
+}
+
+.h1-contact {
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: -10px;
+  margin-bottom: -5px;
+  text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
+    0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
+}
+
+.contact-form {
+  padding: 10px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: bisque;
+}
+
+.contact-form:focus {
+  transition: 0.1s;
+  transform: scale(1.01);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
+}
+
+#message {
+  width: 500px;
+  height: 100px;
 }
 
 /* INTRO PARAGRAPH STYLING */
