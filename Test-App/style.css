@@ -127,12 +127,12 @@ body {
 }
 
 #side-nav-bar a:hover {
-  background-color: #212529; /* Add a hover color */
+  background-color: #40464b; /* Add a hover color */
   border-radius: 10px;
 }
 
 .active {
-  background-color: rgb(0, 0, 0); /* Add an active/current color */
+  background-color: #3d3439; /* Add an active/current color */
   border-radius: 10px;
   transition: all 3s ease;
 }
@@ -187,15 +187,15 @@ body {
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: -5px;
   text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
-    0 0 10px #3d3d3d, 0 0 100px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
+    0 0 10px #3d3d3d, 0 0 50px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
 }
 
 .h2-portfolio {
   color: #3d3d3d;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -271,7 +271,7 @@ body {
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: -5px;
   text-shadow: 0 0 10px#bbbaba, 0 0 10px #bbbaba, 0 0 10px #bbbaba,
     0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 10px #3d3d3d, 0 0 20px #3d3d3d;
@@ -358,7 +358,7 @@ body {
   height: 100%;
   width: 0;
   border-radius: 5px;
-  background-color: #212529;
+  background-color: #6d5564;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px #212529;
   box-shadow: 4px 8px 19px -3px #212529;
