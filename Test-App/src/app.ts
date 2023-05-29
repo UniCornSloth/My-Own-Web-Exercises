@@ -10,7 +10,7 @@ const formContainer = document.querySelector(
 ) as HTMLFormElement;
 
 // Elements on the Main Nav Bar
-const mainPage = document.querySelector("#main-page") as HTMLElement;
+const mainPage = document.querySelector(".main-page") as HTMLElement;
 const portfolioSection = document.querySelector("#portfolio") as HTMLElement;
 const aboutMeSection = document.querySelector("#about-me") as HTMLElement;
 const contactMeSection = document.querySelector("#contact-me") as HTMLElement;
@@ -20,7 +20,22 @@ const downloadLink = document.querySelector("#download-link") as HTMLElement;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Function to show main page after login has been submitted
-function showMainPage() {
+// function showMainPage() {
+//   formContainer.style.display = "none";
+//   mainPage.style.display = "block";
+//   typeWriter();
+// }
+
+function showMainPage(sectionId: string) {
+  const sections = document.querySelectorAll(".main-page > section");
+  for (const section of sections) {
+    const element = section as HTMLElement;
+    if (section.id === sectionId) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
   formContainer.style.display = "none";
   mainPage.style.display = "block";
   typeWriter();
@@ -77,7 +92,7 @@ form.addEventListener("submit", (event) => {
   console.log(`Username: ${username}, Password: ${password}`);
 
   //Show main page after submit button on login form has been clicked
-  showMainPage();
+  showMainPage("portfolio-content-section");
 
   // Highlighting button on selected section
   highlightButton(portfolioSection);
@@ -88,17 +103,23 @@ form.addEventListener("submit", (event) => {
 portfolioSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(portfolioSection);
-  showMainPage();
+  showMainPage("portfolio-content-section");
 });
 // ABOUT ME SELECTION
 aboutMeSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(aboutMeSection);
+  const portfolioSectionElement = document.getElementById(
+    "portfolio-content-section"
+  );
+  portfolioSectionElement?.scrollIntoView({ behavior: "smooth" });
+  // showMainPage("about-section");
 });
 // CONTACT ME SELECTION
 contactMeSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(contactMeSection);
+  showMainPage("contact-section");
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function to add flip animation on download icon
@@ -132,7 +153,7 @@ submitButton.addEventListener("click", (event) => {
 
 // PAGE SECTIONS
 // Typewriter Demo
-let i: number = -1;
+let i: number = 0;
 let txt: string = "Web Developer Student"; // The text content
 let speed: number = 90; //The speed/duration of the effect in milliseconds for the text to "write on page"
 
