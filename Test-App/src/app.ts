@@ -109,17 +109,13 @@ portfolioSection.addEventListener("click", (event) => {
 aboutMeSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(aboutMeSection);
-  const portfolioSectionElement = document.getElementById(
-    "portfolio-content-section"
-  );
-  portfolioSectionElement?.scrollIntoView({ behavior: "smooth" });
-  // showMainPage("about-section");
+  showMainPage("about-me");
 });
 // CONTACT ME SELECTION
 contactMeSection.addEventListener("click", (event) => {
   event.preventDefault();
   highlightButton(contactMeSection);
-  showMainPage("contact-section");
+  showMainPage("contact-me");
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function to add flip animation on download icon
