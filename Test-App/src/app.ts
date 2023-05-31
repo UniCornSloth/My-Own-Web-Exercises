@@ -4,7 +4,9 @@
 const form = document.querySelector("#form") as HTMLFormElement;
 const usernameInput = document.querySelector("#username") as HTMLInputElement;
 const passwordInput = document.querySelector("#password") as HTMLInputElement;
-const submitButton = document.querySelector("#submit") as HTMLButtonElement;
+const submitButtonLogin = document.querySelector(
+  "#submit-login"
+) as HTMLButtonElement;
 const formContainer = document.querySelector(
   "#form-container"
 ) as HTMLFormElement;
@@ -18,14 +20,7 @@ const downloadIcon = document.querySelector("#cvicon") as HTMLElement;
 const downloadLink = document.querySelector("#download-link") as HTMLElement;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Function to show main page after login has been submitted
-// function showMainPage() {
-//   formContainer.style.display = "none";
-//   mainPage.style.display = "block";
-//   typeWriter();
-// }
-
+// FUNCTION SHOWING MAIN PAGE AFTER LOGIN DETAILS
 function showMainPage(sectionId: string) {
   const sections = document.querySelectorAll(".main-page > section");
   for (const section of sections) {
@@ -117,6 +112,7 @@ contactMeSection.addEventListener("click", (event) => {
   highlightButton(contactMeSection);
   showMainPage("contact-me");
 });
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function to add flip animation on download icon
 downloadIcon.addEventListener("mousedown", (event) => {
@@ -140,7 +136,7 @@ downloadLink.addEventListener("mouseup", (event) => {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Adding an event listener to the submit button and click event
 // Creating the listener to listen/ check for when the user clicks the submit button
-submitButton.addEventListener("click", (event) => {
+submitButtonLogin.addEventListener("click", (event) => {
   event.preventDefault();
   // Triggering the form submission event
   form.dispatchEvent(new Event("submit"));
@@ -163,3 +159,6 @@ function typeWriter() {
     setTimeout(typeWriter, speed); //This sets the speed at wich the characters are displayed on the page.
   }
 } //The typewritere function is called to display the the characters one at a time.
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Form submit function
+const;

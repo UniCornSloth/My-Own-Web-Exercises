@@ -20,12 +20,12 @@
       <input type="text" class="username" placeholder="Enter username as User1" id="username" />
       <label>Password</label>
       <input type="text" class="password" placeholder="Enter Password as Password@123" id="password" />
-      <button id="submit">Submit</button>
+      <button id="submit-login">Submit</button>
     </form>
   </div>
 
 
-  <div class="main-page" hidden>
+  <div class="main-page">
     <!-- SIDE NAVIGATION BAR STATIC ////////////////////////////////////////////////////////////////////////////////////////////////-->
     <nav id="side-nav-bar">
       <img src="/img/image1.jpg" alt="logo" class="logo">
@@ -194,32 +194,38 @@
       <header class="header-contact">MY CONTACT DETAILS</header>
       <br><br>
       <div class="">
-        <h2 class="h2-portfolio">Contact Me:</h2>
+        <h2 class="h2-contact">Contact Me Here:</h2>
         <!-- Contact me information -->
         <div class="h1-personals">
-          <p><i class="fa fa-phone fa-fw " id="phone"></i> Phone: +27 71 256 3004</p>
-          <p><i class="fa fa-envelope fa-fw" id="mail"></i> Email: <a
-              href="bothaherling@gmail.com">bothaherling@gmail.com</a></p>
-          <p><i class="fa fa-map-marker" id="marker"></i> Location: Somerset West, Western Cape</p>
+          <p class="contact-para">
+            <i class="fa fa-phone fa-fw" id="phone"></i> Phone: +27 71 256 3004 <br><br>
+            <i class="fa fa-envelope fa-fw" id="mail"></i> Email: <a
+              href="bothaherling@gmail.com">bothaherling@gmail.com</a><br><br>
+            <i class="fa fa-map-marker" id="marker"></i> Location: Somerset West, Western Cape
+          </p>
         </div><br>
-        <p class="para">Let's get in touch. Send me a message:</p>
-        <div class="contact-container">
-          <form>
-            <label class="label-text">Enter Your Name:</label>
-            <p><input class="contact-form" type="text" placeholder="Name" required name="Name">
-            </p>
-            <label class="label-text">Enter Your Email:</label>
-            <p><input class="contact-form" type="text" placeholder="Email" required name="Email"></p>
-            <label class="label-text">Enter Your Message:</label>
-            <p><input class="contact-form" type="text" placeholder="Message" required name="Message" id="message"></p>
-            <p>
-              <button class="button-send-message" type="submit">
+        <!-- CONTACT MESSAGE  -->
+        <h2 class="para-message">Let's get in touch. Send me a message:<h2>
+            <div class="contact-container">
+              <form id="contact-me-form">
+                <label class="label-text">Enter Your Name:</label>
+                <input type="text" class="contact-form" placeholder="Name" id="name-Input" name="name">
+
+                <label class="label-text">Enter Your Email:</label>
+                <input type="email" class="contact-form" placeholder="Email" id="email-Input" name="email">
+
+                <label class="label-text">Enter Your Message:</label>
+                <textarea type="text" class="contact-form" placeholder="Message" id="message-Input"
+                  name="message"></textarea>
+              </form>
+
+              <button type="submit" class="button-send-message" id="sendmessage">
                 <i class="fa fa-paper-plane"></i> SEND MESSAGE
               </button>
-            </p>
-          </form>
-        </div>
-        <!-- End Contact Section -->
+
+
+            </div>
+            <!-- End Contact Section -->
       </div>
 
 
