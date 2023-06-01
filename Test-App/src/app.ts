@@ -19,7 +19,7 @@ const contactMeSection = document.querySelector("#contact-me") as HTMLElement;
 const downloadIcon = document.querySelector("#cvicon") as HTMLElement;
 const downloadLink = document.querySelector("#download-link") as HTMLElement;
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
 // FUNCTION SHOWING MAIN PAGE AFTER LOGIN DETAILS
 function showMainPage(sectionId: string) {
   const sections = document.querySelectorAll(".main-page > section");
@@ -43,21 +43,8 @@ function isPasswordSecure(password: string): boolean {
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return passwordRegex.test(password);
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Function to high light button on selected section on the nav bar
-function highlightButton(selectedButton: HTMLElement) {
-  const activeButton = document.querySelector(
-    "#side-nav-bar .active"
-  ) as HTMLElement;
-  if (activeButton) {
-    activeButton.classList.remove("active");
-  }
-  selectedButton.classList.add("active");
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Adding an event listener the form submit event
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
+// Adding an event listener the login form submit event
 // Using addEventlistener on submit button listens and checks if username and password is filled in
 form.addEventListener("submit", (event) => {
   // Prevent default on event functions
@@ -81,7 +68,7 @@ form.addEventListener("submit", (event) => {
     );
     return;
   }
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //---------------------------------------------------------------------------------------------------------------------------------------------------//
   // Logging the values to the console for reference
   // Instead of logging to console. It will be logged to a data base
   console.log(`Username: ${username}, Password: ${password}`);
@@ -92,7 +79,18 @@ form.addEventListener("submit", (event) => {
   // Highlighting button on selected section
   highlightButton(portfolioSection);
 });
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
+// Function to high light button on selected section on the nav bar
+function highlightButton(selectedButton: HTMLElement) {
+  const activeButton = document.querySelector(
+    "#side-nav-bar .active"
+  ) as HTMLElement;
+  if (activeButton) {
+    activeButton.classList.remove("active");
+  }
+  selectedButton.classList.add("active");
+}
+// ----------------------------------------------------------------------------------------------------------------------------------------------------//
 // Event Listeners for each section to be highlighted when clicked or selected.
 // PORTFOLIO SELECTION
 portfolioSection.addEventListener("click", (event) => {
@@ -113,7 +111,7 @@ contactMeSection.addEventListener("click", (event) => {
   showMainPage("contact-me");
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
 // Function to add flip animation on download icon
 downloadIcon.addEventListener("mousedown", (event) => {
   event.preventDefault();
@@ -133,7 +131,7 @@ downloadLink.addEventListener("mouseup", (event) => {
   downloadIcon.classList.remove("flip");
 });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
 // Adding an event listener to the submit button and click event
 // Creating the listener to listen/ check for when the user clicks the submit button
 submitButtonLogin.addEventListener("click", (event) => {
@@ -141,7 +139,7 @@ submitButtonLogin.addEventListener("click", (event) => {
   // Triggering the form submission event
   form.dispatchEvent(new Event("submit"));
 });
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
 
 // PAGE SECTIONS
 // Typewriter Demo
@@ -159,6 +157,64 @@ function typeWriter() {
     setTimeout(typeWriter, speed); //This sets the speed at wich the characters are displayed on the page.
   }
 } //The typewritere function is called to display the the characters one at a time.
-// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Form submit function
-const;
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
+// Contact Form submit function
+function sendMessage() {
+  const nameInput = document.getElementById("name-input") as HTMLInputElement;
+  const emailInput = document.getElementById("email-input") as HTMLInputElement;
+  const messageTextarea = document.getElementById(
+    "message-textarea"
+  ) as HTMLTextAreaElement;
+
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const message = messageTextarea.value;
+
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill in all the fields!");
+    return;
+  }
+
+  console.log(`Name:`, name);
+  console.log(`Name:`, email);
+  console.log(`Name:`, message);
+
+  nameInput.value = "";
+  emailInput.value = "";
+  messageTextarea.value = "";
+}
+
+const sendButton = document.getElementById("send-button") as HTMLButtonElement;
+sendButton.addEventListener("click", sendMessage);
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
+// PAGE BTTONS
+// Get the necessary elements
+const aboutSection = document.getElementById("about-me");
+const contactSection = document.getElementById("contact-me");
+const nextPageAboutButton = document.getElementById(
+  "next-page-about"
+) as HTMLButtonElement;
+const nextPageContactButton = document.getElementById(
+  "next-page-contact"
+) as HTMLButtonElement;
+const nextPageHomeButton = document.getElementById(
+  "next-page-home"
+) as HTMLButtonElement;
+
+// Function to hide all sections except the selected section
+
+// Event listeners for section selection
+nextPageHomeButton.addEventListener("click", function () {
+  showMainPage("portfolio-content-section");
+  highlightButton(portfolioSection);
+});
+
+nextPageAboutButton.addEventListener("click", function () {
+  showMainPage("about-me");
+  highlightButton(aboutMeSection);
+});
+nextPageContactButton.addEventListener("click", function () {
+  showMainPage("contact-me");
+  highlightButton(contactMeSection);
+});

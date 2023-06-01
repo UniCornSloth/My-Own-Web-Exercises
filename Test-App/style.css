@@ -12,8 +12,9 @@ body {
 /* ________________________________________________________________________________________________________ */
 /*MAIN PAGE CONTENT*/
 .main-page {
-  margin-left: 200px; /* Adjust the margin to create space next to the navigation bar */
-  padding: 10px; /* Add padding to the main page content */
+  position: static;
+  margin-left: 200px;
+  height: 900px;
 }
 
 /* ________________________________________________________________________________________________________ */
@@ -178,15 +179,18 @@ body {
 }
 
 /* ________________________________________________________________________________________________________ */
-/* PORTFOLIO SECTION */
+/* PORTFOLIO HOME SECTION */
 .portfolio-content-section {
-  order: -1;
+  position: relative;
+  width: 100%;
+  height: 960px;
+  margin: 0 auto;
   background-color: rgb(139, 174, 179);
   border-radius: 10px;
-  height: 96vh;
 }
 
 .header-portfolio {
+  position: relative;
   width: 100%;
   text-align: center;
   border-radius: 10px;
@@ -211,7 +215,7 @@ body {
 
 .footer-portfolio {
   position: relative;
-  top: 110px;
+  top: 128px;
   width: 100%;
   height: 50px;
   display: flex;
@@ -226,24 +230,26 @@ body {
 /* ________________________________________________________________________________________________________ */
 /* ABOUT ME SECTION */
 .aboutme-content-section {
-  order: -1;
+  position: relative;
+  width: 100%;
+  height: 960px;
+  margin: 0 auto;
   background-color: rgb(139, 174, 179);
   border-radius: 10px;
-  height: 96vh;
 }
 
 .header-about {
-  background-color: #555;
-  margin-top: -20px;
-  width: auto;
+  position: relative;
+  width: 100%;
   text-align: center;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  align-items: center;
   font-size: 80px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-bottom: -5px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  align-items: center;
+  background-color: #555;
   text-shadow: 0 0 10px bisque, 0 0 10px bisque, 0 0 10px bisque,
     0 0 10px #2e2d2d, 0 0 50px #2e2d2d, 0 0 10px #2e2d2d, 0 0 20px #2e2d2d;
 }
@@ -298,7 +304,7 @@ ul {
 
 .footer-about {
   position: relative;
-  top: 153px;
+  top: 213px;
   width: 100%;
   height: 50px;
   display: flex;
@@ -313,13 +319,16 @@ ul {
 /* ________________________________________________________________________________________________________ */
 /* CONTACT ME SECTION */
 .contactme-content-section {
-  position: flex;
+  position: relative;
+  width: 100%;
+  height: 960px;
+  margin: 0 auto;
   background-color: rgb(139, 174, 179);
   border-radius: 10px;
-  height: 96vh;
 }
 
 .header-contact {
+  position: relative;
   width: 100%;
   text-align: center;
   border-radius: 10px;
@@ -352,10 +361,22 @@ ul {
   text-align: justify;
   font-size: 30px;
 }
+/* CONTACT FORM STYLING */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 .contact-form {
+  width: 200px;
   margin-left: 25px;
   margin-bottom: 10px;
+  padding: 5px;
   height: 35px;
   border: solid 1px rgb(83, 83, 83);
   border-radius: 5px;
@@ -364,18 +385,33 @@ ul {
     "Lucida Sans", Arial, sans-serif;
 }
 
+.contact-form-message {
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  border: solid 1px rgb(83, 83, 83);
+  border-radius: 5px;
+  background-color: bisque;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.contact-form-message:focus {
+  transition: 0.1s;
+  transform: scale(1.01);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
+}
+
 .contact-form:focus {
   transition: 0.1s;
   transform: scale(1.01);
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 1);
 }
 
-#message {
-  width: 300px;
-  height: 100px;
-}
-
 .label-text {
+  font-weight: bold;
   font-size: 15px;
   margin-left: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -385,6 +421,9 @@ ul {
 }
 
 .button-send-message {
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
   margin-left: 25px;
   z-index: 1;
   position: relative;
@@ -429,7 +468,7 @@ ul {
 
 .footer-contact {
   position: relative;
-  top: 203px;
+  top: 141px;
   width: 100%;
   height: 50px;
   display: flex;
@@ -555,15 +594,7 @@ button:hover::before {
   text-shadow: 0 0 10px bisque, 0 0 10px bisque, 0 0 10px bisque,
     0 0 10px #2e2d2d, 0 0 50px #2e2d2d, 0 0 10px #2e2d2d, 0 0 20px #2e2d2d;
 }
-.column-header {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: auto;
-  background-color: #555;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
+
 .column-section {
   background-color: rgb(139, 174, 179);
   border-radius: 10px;
@@ -589,7 +620,7 @@ button:hover::before {
   /* border-bottom: solid 1px rgb(110, 110, 110); */
   background-color: bisque;
   float: left;
-  width: 32.05%;
+  width: 32.1%;
   padding: 10px;
   height: 300px;
 }

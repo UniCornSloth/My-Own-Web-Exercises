@@ -25,7 +25,7 @@
   </div>
 
 
-  <div class="main-page">
+  <div class="main-page" hidden>
     <!-- SIDE NAVIGATION BAR STATIC ////////////////////////////////////////////////////////////////////////////////////////////////-->
     <nav id="side-nav-bar">
       <img src="/img/image1.jpg" alt="logo" class="logo">
@@ -70,7 +70,7 @@
           Download CV
         </p>
       </a>
-      <script src="./dist/app.js"></script>
+      <!-- ///////////////////////////////////////////////////////////////// -->
     </nav>
 
     <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
@@ -97,28 +97,25 @@
       </div>
 
       <footer class="footer-portfolio">
-        <button class="button">Next Page</button>
+        <button class="button" id="next-page-about">Next Page</button>
       </footer>
-      <hr class="line-portfolio">
+      <hr class="line-about">
     </section>
 
     <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- PORTFOLIO ABOUT SECTION -->
     <section class="aboutme-content-section" id="about-me" hidden>
-      <div class="column-header">
-        <h2 class="column-heading">ABOUT ME</h2>
-
-        <p class="para-about">
-          A highly motivated and committed individual with experience in various industries, including graphic design,
-          printing, carpentry, and telecommunications.<br> I am a quick learner and enjoy new challenges. I possess
-          advanced
-          computer skills.<br> With a positive and friendly attitude, a
-          well-disciplined and creative mindset, and a strong work ethic, I am dedicated to achieving success in any
-          task
-          or project.<br> Demonstrates punctuality and a willingness to learn new skills and traits, and I am not
-          afraid to take on new and exciting adventures.
-        </p>
-      </div>
+      <header class="header-portfolio">ABOUT ME</header>
+      <p class="para-about">
+        A highly motivated and committed individual with experience in various industries, including graphic design,
+        printing, carpentry, and telecommunications.<br> I am a quick learner and enjoy new challenges. I possess
+        advanced
+        computer skills.<br> With a positive and friendly attitude, a
+        well-disciplined and creative mindset, and a strong work ethic, I am dedicated to achieving success in any
+        task
+        or project.<br> Demonstrates punctuality and a willingness to learn new skills and traits, and I am not
+        afraid to take on new and exciting adventures.
+      </p>
 
       <div class="row">
         <div class="column-1">
@@ -133,9 +130,8 @@
             <li>SQL: Completed Udemy Certificate</li>
             <li>TypeScript: Completed Udemy Certificate</li>
           </ul>
-
-
         </div>
+
         <div class="column-2">
           <H1 class="h1-skills">GENERAL SKILLS</H1>
           <hr class="line-column">
@@ -167,7 +163,6 @@
             <li>Reading</li>
             <li>Small carpentry projects</li>
           </ul>
-
         </div>
       </div>
 
@@ -183,7 +178,7 @@
 
 
       <footer class="footer-about">
-        <button class="button">Next Page</button>
+        <button class="button" id="next-page-contact">Next Page</button>
       </footer>
       <hr class="line-about">
     </section>
@@ -207,34 +202,33 @@
         <!-- CONTACT MESSAGE  -->
         <h2 class="para-message">Let's get in touch. Send me a message:<h2>
             <div class="contact-container">
-              <form id="contact-me-form">
+
+              <form id="message-form">
                 <label class="label-text">Enter Your Name:</label>
-                <input type="text" class="contact-form" placeholder="Name" id="name-Input" name="name">
+                <input class="contact-form" id="name-input" type="text" placeholder="Name" name="name">
 
                 <label class="label-text">Enter Your Email:</label>
-                <input type="email" class="contact-form" placeholder="Email" id="email-Input" name="email">
+                <input class="contact-form" id="email-input" type="email" placeholder="Email" name="email">
 
                 <label class="label-text">Enter Your Message:</label>
-                <textarea type="text" class="contact-form" placeholder="Message" id="message-Input"
+                <textarea class="contact-form-message" id="message-textarea" type="text" placeholder="Message"
                   name="message"></textarea>
               </form>
 
-              <button type="submit" class="button-send-message" id="sendmessage">
+              <button type="submit" class="button-send-message" id="send-button">
                 <i class="fa fa-paper-plane"></i> SEND MESSAGE
               </button>
-
-
             </div>
-            <!-- End Contact Section -->
       </div>
 
 
       <footer class="footer-contact">
-        <button class="button">Home</button>
+        <button class="button" id="next-page-home">Home</button>
       </footer>
       <hr class="line-contact">
     </section>
   </div>
+  <script src="./dist/app.js"></script>
 </body>
 
 </html>
