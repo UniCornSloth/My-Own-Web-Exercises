@@ -490,10 +490,10 @@ ul {
 .image-container img {
   /* width: 33.33%; */
   width: 30%;
-  height: auto;
+  height: 501px;
   border-radius: 10px;
   margin-right: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 4);
 }

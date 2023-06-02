@@ -34,6 +34,7 @@ function showMainPage(sectionId: string) {
   formContainer.style.display = "none";
   mainPage.style.display = "block";
   typeWriter();
+  typeWriter2();
 }
 
 // LOGIN SECTION
@@ -158,6 +159,25 @@ function typeWriter() {
   }
 } //The typewritere function is called to display the the characters one at a time.
 //---------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// PAGE SECTIONS
+// Typewriter Demo2
+let x: number = 0;
+let txt2: string =
+  "HTML & CSS, JavaScript, SQL, TypeScript... And more to come!"; // The text content
+let speed2: number = 100; //The speed/duration of the effect in milliseconds for the text to "write on page"
+
+function typeWriter2() {
+  if (x < txt2.length) {
+    const element = document.getElementById("typewriterdemo2");
+    if (element) {
+      element.innerHTML += txt2.charAt(x); //charAt(i) property of the element is updated by appending the character at the current index. This adds the character at the current index
+    }
+    x++; // This increments the index 'i' to move to the next character in the string.
+    setTimeout(typeWriter2, speed2); //This sets the speed at wich the characters are displayed on the page.
+  }
+} //The typewritere function is called to display the the characters one at a time.
+//---------------------------------------------------------------------------------------------------------------------------------------------------//
 // Contact Form submit function
 function sendMessage() {
   const nameInput = document.getElementById("name-input") as HTMLInputElement;
@@ -176,8 +196,8 @@ function sendMessage() {
   }
 
   console.log(`Name:`, name);
-  console.log(`Name:`, email);
-  console.log(`Name:`, message);
+  console.log(`Email:`, email);
+  console.log(`Message:`, message);
 
   nameInput.value = "";
   emailInput.value = "";
